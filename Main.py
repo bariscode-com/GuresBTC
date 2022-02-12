@@ -4,6 +4,41 @@ import requests
 from bs4 import BeautifulSoup
 import datetime
 import socket
+# import telebot
+# from telethon.sync import TelegramClient
+# from telethon.tl.types import InputPeerUser, InputPeerChannel
+# from telethon import TelegramClient, sync, events
+
+# api_id = 'API_id'
+# api_hash = 'API_hash'
+# token = 'bot token'
+# message = "Working..."
+# phone = 'YOUR_PHONE_NUMBER_WTH_COUNTRY_CODE'
+# client = TelegramClient('session', api_id, api_hash)
+# client.connect()
+# if not client.is_user_authorized():
+  
+#     client.send_code_request(phone)
+     
+#     # signing in the client
+#     client.sign_in(phone, input('Enter the code: '))
+  
+  
+# try:
+#     # receiver user_id and access_hash, use
+#     # my user_id and access_hash for reference
+#     receiver = InputPeerUser('user_id', 'user_hash')
+ 
+#     # sending message using telegram client
+#     client.send_message(receiver, message, parse_mode='html')
+# except Exception as e:
+     
+#     # there may be many error coming in while like peer
+#     # error, wrong access_hash, flood_error, etc
+#     print(e);
+ 
+# # disconnecting the telegram session
+# client.disconnect()
 
 def internet(host="8.8.8.8", port=53, timeout=3):
     """
@@ -19,10 +54,9 @@ def internet(host="8.8.8.8", port=53, timeout=3):
         sleep(1)
         return False
 
-internet()
 start = input("Start on page :")
 intstart = int(start)
-for x in range(intstart,9999999999999999999999999999999999):
+for x in range(intstart,4631683569492647816942839400347516314113502571162996175304206525660726459774):
     if (internet()):
         page = requests.get("https://www.bitcoinlist.io/"+str(x))
         if(page.status_code == 200):
@@ -77,7 +111,7 @@ for x in range(intstart,9999999999999999999999999999999999):
         print(str(date)+" : https://www.bitcoinlist.io/"+str(x))
         sleep(1)
     else:
-        start -= 1
+        intstart -= 1
         print("Connecting to internet access in "+str(x))
 
     
